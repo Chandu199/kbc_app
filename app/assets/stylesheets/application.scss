@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import 'icheck/square/_all';
+@import "toastr";
+
+// utilities
+@import 'utilities/variables';
+@import 'utilities/utilities';
+
+// Components
+@import 'homepage.scss';

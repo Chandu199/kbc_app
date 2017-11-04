@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+.bold-warning-title{
+  color: $yellow-color;
+  font-family: "lato", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+}
+
+.flat-warning-button{
+  @include button-variant($black, $yellow-color, $yellow-color);
+  border-radius: 0px;
+  font-family: "lato";
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+.lowercase{
+  text-transform: lowercase
+}
