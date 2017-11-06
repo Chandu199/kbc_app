@@ -16,6 +16,7 @@
 //= require jquery.validate
 //= require icheck
 //= require toastr
+//= require jquery_nested_form
 //= require turbolinks
 //= require_tree .
 

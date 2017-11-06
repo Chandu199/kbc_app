@@ -28,6 +28,7 @@ gem 'jquery-validation-rails'
 gem 'icheck-rails'
 gem 'countdown'
 gem 'toastr-rails'
+gem "nested_form"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
