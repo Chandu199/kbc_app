@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :users
   end
 
-
   namespace :player do
 
   end

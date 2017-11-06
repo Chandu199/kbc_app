@@ -27,7 +27,6 @@ gem 'font-awesome-rails'
 gem 'jquery-validation-rails'
 gem 'icheck-rails'
 gem 'countdown'
-gem 'toastr-rails'
 gem "nested_form"
 
 group :development, :test do
