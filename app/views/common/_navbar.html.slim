@@ -1,0 +1,11 @@
+ul.nav.nav-pills.navbar-purple
+  li =image_tag 'KBC.png', class: 'logo'
+  - if !user_signed_in?
+    .row
+      .col-md-8.col-md-offset-1.warning-bold-text.text-center.capitalize Kaun Banega Crorepathi
+  -else
+    - if current_user.admin == true
+      li = link_to 'Users', '#'
+      li = link_to 'Tests', '#'
+    - else
+      li.btn.btn-warning.flat-warning-button Kaun Banega Crorepathi

@@ -1,0 +1,5 @@
+.list-group
+  -if resource.errors.any?
+    p = pluralize(resource.errors.count, 'error')
+    - resource.errors.full_messages.each do |msg|
+      .list-group-item.list-group-item-danger = msg

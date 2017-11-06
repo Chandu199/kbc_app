@@ -26,3 +26,19 @@
 .lowercase{
   text-transform: lowercase
 }
+
+.warning-bold-text{
+  font-size: 30px;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  color: $yellow-color;
+}
+
+.logo{
+  width: 70px;
+  height: auto;
+  margin-left: 20px;
+}
+.navbar-purple{
+  background-color: $dark-purple;
+}

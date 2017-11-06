@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "homepage#landing_page"
 
   namespace :admin do
-    resources :users
+
   end
 
   namespace :player do
