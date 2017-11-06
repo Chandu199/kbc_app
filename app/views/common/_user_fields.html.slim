@@ -1,0 +1,15 @@
+.form-group
+  = f.label :name, class: 'warning-text'
+  = f.text_field :name, autofocus: true, autocomplete: "off", class: 'form-control'
+
+.form-group
+  = f.label :phone_number, class: 'warning-text'
+  = f.telephone_field :phone_number, autofocus: true, autocomplete: "off", class: 'form-control'
+
+.form-group
+  = f.label :email, class: 'warning-text'
+  = f.email_field :email, autocomplete: "off", class: 'form-control'
+
+.form-group
+  = f.label :city, class: 'warning-text'
+  = f.text_field :city, autofocus: true, autocomplete: "off", class: 'form-control'

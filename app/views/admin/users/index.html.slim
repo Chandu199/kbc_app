@@ -1,0 +1,18 @@
+.panel.panel-default
+  = link_to 'Create New user', new_admin_user_path, class: 'btn flat-warning-button'
+  h3.panel-heading All Users
+  .panel-body
+    table.table.table-hover
+      tr
+        th Name
+        th Email
+        th Phone Number
+        th City
+        th Admin
+      -@users.each do |user|
+        tr
+          td = user.name
+          td = user.email
+          td = user.phone_number
+          td = user.city
+          td = user.admin

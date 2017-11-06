@@ -1,0 +1,7 @@
+= form_for [:admin, @user], class: 'form' do |f|
+  = render partial: 'common/user_fields', locals: {f: f}
+  .form-group
+    = f.label :admin, class: 'warning-text'
+    = f.select :admin, [['Yes', true], ['No', false]]
+  .form-group
+    = f.submit class: 'btn btn-md flat-warning-button'

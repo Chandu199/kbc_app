@@ -27,6 +27,12 @@
   text-transform: lowercase
 }
 
+.warning-text{
+  color: $yellow-color;
+  font-family: 'lato';
+  font-size: 14px;
+}
+
 .warning-bold-text{
   font-size: 30px;
   font-family: "lato", sans-serif;
@@ -41,4 +47,5 @@
 }
 .navbar-purple{
   background-color: $dark-purple;
+  border-bottom: 3px solid $yellow-color;
 }
