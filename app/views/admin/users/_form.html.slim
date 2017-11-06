@@ -1,4 +1,5 @@
 = form_for [:admin, @user], class: 'form' do |f|
+  = render partial: 'common/error', locals: {resource: @user}
   = render partial: 'common/user_fields', locals: {f: f}
   .form-group
     = f.label :admin, class: 'warning-text'

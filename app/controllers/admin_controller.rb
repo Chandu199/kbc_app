@@ -4,7 +4,7 @@ class AdminController < ApplicationController
   protected
   def ensure_admin
     if current_user.admin != true
-      redirect_to landing_page_path
+      redirect_to root_path
     end
   end
 end

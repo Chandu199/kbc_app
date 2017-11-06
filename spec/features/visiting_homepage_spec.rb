@@ -7,5 +7,5 @@ describe 'Landingpage content', :type => :controller do
     expect(page).to have_content 'Kaun banega Crorepathi'
     expect(page).to have_content 'Play Game'
   end
-  
+
 end
