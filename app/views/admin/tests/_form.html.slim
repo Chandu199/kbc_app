@@ -1,0 +1,11 @@
+.well
+  .col-md-6.col-md-offset-3
+    .panel.navbar-purple
+      .panel-heading.warning-text Write the Question
+      .panel-body
+        =form_for [:admin, @test] ,class: 'form' do |f|
+          .form-group
+            = f.label :test_name, class: 'warning-text'
+            = f.text_field :name, class: 'form-control'
+          .form-group
+            = f.submit class: 'btn bt-md flat-warning-button'

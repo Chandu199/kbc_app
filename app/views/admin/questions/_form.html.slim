@@ -1,0 +1,21 @@
+.well
+  .row
+    .col-md-12
+      .panel.navbar-purple
+        .panel-heading.warning-text Write the Question
+        .panel-body
+          =form_for [:admin, @test, @question] ,class: 'form', id: 'add-question' do |f|
+            .form-group
+              = f.label :question, class: 'warning-text'
+              = f.text_field :context, class: 'form-control'
+            hr
+            h4.warning-text Options for the Question
+            - 4.times do
+              = f.fields_for :options, class: 'form' do |o|
+                = render partial: 'admin/options/form', locals: {o: o}
+              hr
+
+            .form-group
+              = f.submit class: 'btn bt-md flat-warning-button'
+
+

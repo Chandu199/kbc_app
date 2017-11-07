@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
+
+    resources :tests do
+      resources :questions do
+        resources :options
+      end
+    end
+
   end
 
   namespace :player do

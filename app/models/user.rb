@@ -6,4 +6,6 @@ class User < ApplicationRecord
   validates_presence_of :name, length: {minimum: 4, maximum: 20}
   validates_presence_of :phone_number, numericality: true, length: {minimum: 10, maximum: 12}
   validates_presence_of :city
+
+  has_many :tests
 end

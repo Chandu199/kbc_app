@@ -1,0 +1,6 @@
+.form-goup
+  = o.label :option, class: 'warning-text'
+  = o.text_field :description, class: 'form-control'
+.form-group
+  = o.label :answer, class: 'warning-text'
+  = o.select :answer, [[],["Yes",true],["NO",false]], class: 'form-control'

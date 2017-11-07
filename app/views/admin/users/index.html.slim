@@ -10,6 +10,7 @@
         th City
         th Admin
         th Actions
+        / th Test Details
       -@users.each do |user|
         tr
           td = user.name
@@ -20,4 +21,10 @@
           td
             span = link_to 'Edit |', edit_admin_user_path(user)
             span = link_to ' Delete', admin_user_path(user), method: :delete, data: {confirm: "Are you sure?"}
+          / td
+          /   -if user.tests.any?
+          /     = link_to 'View', admin_user_tests_path(user)
+          /   - else
+          /     = link_to 'Create', admin_user_test_path(user)
+
 

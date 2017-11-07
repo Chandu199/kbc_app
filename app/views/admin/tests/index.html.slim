@@ -1,0 +1,20 @@
+.panel.panel-default
+  h3.panel-heading All Tests
+  = link_to 'Create New Test', new_admin_test_path, class: 'btn flat-warning-button'
+  .panel-body
+    table.table.table-hover
+      tr
+        th Name
+        th Questions Count
+        th Actions
+      - @tests.each do |test|
+        tr
+          td = test.name
+          td = test.questions.count
+          td
+            span = link_to 'Edit |', edit_admin_test_path(test)
+            span = link_to 'Show |', admin_test_path(test)
+            span = link_to ' Delete', admin_test_path(test), method: :delete, data: {confirm: "Are you sure?"}
+
+
+

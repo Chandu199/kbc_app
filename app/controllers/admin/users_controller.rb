@@ -3,6 +3,7 @@ class Admin::UsersController < AdminController
 
   def index
     @users = User.all
+    @users = @users.decorate
   end
 
   def new
