@@ -1,0 +1,3 @@
+The application is built for Quiz purpose with insiprationfrom KBC(Kaun banega Crorepathi).
+
+To login to application as super admin

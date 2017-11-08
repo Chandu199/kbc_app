@@ -12,8 +12,12 @@ class Admin::UsersController < AdminController
 
   def create
     @user = User.new(user_params)
-    set_password(@user)
+    new_password = set_password(@user)
+    user.password = new_password
+    user.password_confirmation = new_password
+
     if @user.save
+      PasswordMailer.user_login(@user, password)
       flash[:success] = 'User Created successfully'
       redirect_to admin_users_path
     else
@@ -27,8 +31,12 @@ class Admin::UsersController < AdminController
   end
 
   def update
-    set_password(@user)
+    new_password = set_password(@user)
+    user.password = new_password
+    user.password_confirmation = new_password
+
     if @user.update_attributes(user_params)
+      PasswordMailer.user_login(@user, password)
       flash[:success] = 'User details Updated Successfully'
       redirect_to admin_users_path
     else
@@ -51,9 +59,6 @@ class Admin::UsersController < AdminController
     end
 
     def set_password(user)
-      password = PasswordGenerator.generate!
-      user.password = password
-      user.password_confirmation = password
-      Rails.logger.debug "The password is #{password}"
+      PasswordGenerator.generate!
     end
 end
