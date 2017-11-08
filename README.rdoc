@@ -1,3 +1,12 @@
 The application is built for Quiz purpose with insiprationfrom KBC(Kaun banega Crorepathi).
 
-To login to application as super admin
+To login to application as super admin Please to seed the file and obtain login details in seed.rb
+
+Once you login as super admin, you will be able to assign test, create test and questions to user.
+
+
+
+Issues seen
+--------------
+
+At present system has issue with assigning user to a qu

@@ -1,5 +1,6 @@
 ul.nav.nav-pills.navbar-purple
   li =image_tag 'KBC.png', class: 'logo'
+  li = link_to 'Login', new_user_session_path, class: 'warning-text'
   - if user_signed_in?
     - if current_user.admin == true
         li = link_to 'Users', admin_users_path, class: 'warning-text'
