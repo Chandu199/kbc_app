@@ -4,9 +4,20 @@ To login to application as super admin Please to seed the file and obtain login 
 
 Once you login as super admin, you will be able to assign test, create test and questions to user.
 
-
+To play the quiz user once logged has to click on 'Play Game'  which wll open up the page of questions
 
 Issues seen
 --------------
 
-At present system has issue with assigning user to a qu
+1.At present system has issue with assigning user to quiz where once quiz is assigned to new user, old user will be   revoked access to quiz.
+2. State machine yet to be assigned to the Test to make test to have more control.
+3. Timer to autosubmit is to be done.
+4. On options creation, a empty option with 4 option is created.
+
+--Tests
+1. Feature test is built for the user model
+
+Application will be updated and required changes will be made for more relaiblity.
+
+
+
