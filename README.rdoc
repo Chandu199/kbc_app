@@ -1,10 +1,13 @@
+Pull from the develop branch to test on application as application build is in progress
+--------------
+
 The application is built for Quiz purpose with insiprationfrom KBC(Kaun banega Crorepathi).
 
 To login to application as super admin Please to seed the file and obtain login details in seed.rb
 
 Once you login as super admin, you will be able to assign test, create test and questions to user.
 
-To play the quiz user once logged has to click on 'Play Game'  which wll open up the page of questions
+To play the quiz user once logged has to click on 'Play Game'  which wll open up the page of questions.
 
 Issues seen
 --------------
@@ -14,8 +17,15 @@ Issues seen
 3. Timer to autosubmit is to be done.
 4. On options creation, a empty option with 4 option is created.
 
---Tests
-1. Feature test is built for the user model
+Future Build
+--------------
+1. Application will be updated to make sure one user has only active test.
+2. Application will be added with auto submit even at the times of window being closed.
+3. Application will be updated on UI changes to make things more easier.
+
+Tests
+------------
+1. Feature test is built for the user model.
 
 Application will be updated and required changes will be made for more relaiblity.
 
