@@ -10,3 +10,18 @@
       margin-top: 10px;
   }
 }
+
+.questions-container{
+  .well{
+    display: none;
+  }
+
+  .active{
+    display: block;
+  }
+}
+
+.result-section{
+  display: none;
+}
+

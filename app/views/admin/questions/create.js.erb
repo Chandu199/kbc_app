@@ -1,0 +1,5 @@
+$('.form-control').val(' ');
+$('#option-form').find('.form-control').val(' ');
+$('.form-group').find('select').prop('selectedIndex',0);
+$('#questions').prepend('<%= j render @question %>');
+

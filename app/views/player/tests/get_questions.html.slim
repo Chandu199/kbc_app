@@ -1,0 +1,37 @@
+- if @test.present?
+  .questions-container
+    - @test.questions.each do |question|
+      .well id="well_#{question.id}"
+        .panel.navbar-purple
+          .panel-heading.warning-text = question.context
+          .panel-body
+            = form_for question, url: player_user_answer_questions_path(current_user), class: 'form', remote: true do |f|
+              = f.hidden_field :test_id, value: @test.id
+              = f.hidden_field :question_id, value: question.id
+              - question.options.each do |option|
+                .form-group
+                = radio_button_tag(:option, option.id, class: 'form-control')
+                label.warning-text #{option.description}
+              .form-group
+                =f.submit 'Next', class: 'btn btn-lg btn-success'
+-else
+  .well
+    .row
+      .col-md-12
+        .panel.panel-default
+          .panel-heading Your Test details
+          .panel-body
+            table.table.table-hover
+              tr
+                th Test Name
+                th Take on
+                th Score
+              - current_user.tests.each do |test|
+                tr
+                  td =test.name
+                  td = test.updated_at
+                  td = test.total_score
+
+- if @test.present?
+  .row.result-section
+    = render partial: 'player/tests/test_results', locals: {resource: @test}

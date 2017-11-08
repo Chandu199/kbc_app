@@ -4,6 +4,7 @@
       .panel-heading.warning-text Write the Question
       .panel-body
         =form_for [:admin, @test] ,class: 'form' do |f|
+          = render partial: 'common/error', locals: {resource: @test}
           .form-group
             = f.label :test_name, class: 'warning-text'
             = f.text_field :name, class: 'form-control'

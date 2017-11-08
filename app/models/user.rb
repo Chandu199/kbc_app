@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates_presence_of :phone_number, numericality: true, length: {minimum: 10, maximum: 12}
   validates_presence_of :city
 
-  has_many :tests
+  has_many :tests, as: :quiz, dependent: :destroy
 end

@@ -1,0 +1,13 @@
+.panel.navbar-purple
+  .panel-heading.result_container Your Test results are here
+  .panel-body.warning-text
+    p Hey #{resource.name}, Thank you for taking the test here is your Test results.
+    .panel.navbar-purple
+      .panel-body
+        table.table.table-stripped
+          tr
+            th.warning-text Score Obtained
+            th.warning-text Total Score
+          tr
+            td = resource.score_obtained
+            td = resource.total_score

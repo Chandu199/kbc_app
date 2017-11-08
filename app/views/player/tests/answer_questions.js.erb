@@ -1,0 +1,14 @@
+var hide_select = $('.questions-container').find('.active');
+var container_length = $('.questions-container').find('.active').next().length
+var result_container = $('.result-section');
+
+if (container_length == 0){
+  hide_select.remove();
+  result_container.show();
+}else{
+  hide_select.next().addClass('active')
+  hide_select.remove();
+}
+
+
+

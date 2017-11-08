@@ -3,18 +3,33 @@
     .col-md-6
       .panel.panel-primary
         .panel-heading Test Questions List
-        = link_to 'Assign Test to a User', '#', class: 'btn btn-lg flat-warning-button'
+        button.btn.flat-warning-button type="button" data-toggle="modal" data-target="#assign-user" Apply for Test
         .panel-body
-          div.list-group
+          div.list-group id="questions"
             - @test.questions.each do |question|
               div.list-group-item
                 h4.list-group-item-heading =question.context
-                - question.options.each do |option|
-                  .list-group-item-text = option.description
-
+                - question.options.each_with_index do |option,index|
+                  .list-group-item-text Option #{index+1}: #{option.description}
 
     .col-md-6
       .panel.panel-primary
         .panel-heading.warning-text Test Name: #{@test.name}
         .panel-body
           = render 'admin/questions/form'
+
+  div.modal.fade id="assign-user" tabindex="-1" role="dialog"
+    .modal-dialog.modal-md
+      .modal-dialog
+        .modal-content
+          .well
+            .modal-header
+              h4.modal-title Assign to User
+            = form_for [:admin, @test], url: admin_test_assign_test_path(@test), class: 'form-inline' do |f|
+              = render partial: 'common/error', locals: {resource: @test}
+              .form-group
+                = f.label :name_of_the_user
+                = f.select :quiz_id, options_from_collection_for_select(User.all, :id, :name), class: 'form-control'
+              .modal-footer
+              =f.submit class: 'btn btn-success'
+

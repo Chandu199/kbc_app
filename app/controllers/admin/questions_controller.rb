@@ -7,10 +7,16 @@ class Admin::QuestionsController < AdminController
 
     if @question.save
       flash[:success] = 'Added the Question'
-      redirect_to admin_test_path(@test)
+      respond_to do |format|
+        format.js
+      end
+      # redirect_to admin_test_path(@test)
     else
       flash[:error] = 'Question Not added'
-      redirect_to admin_tests_path(@test)
+      respond_to do |format|
+        format.js
+      end
+      # redirect_to admin_tests_path(@test)
     end
   end
 

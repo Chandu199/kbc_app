@@ -6,4 +6,5 @@
     .col-md-10
       =image_tag('ab.png', class: 'banner-image')
     .col-md-2
-    = link_to 'Play Game', '#', class: 'btn btn-lg flat-warning-button uppercase'
+      - if current_user
+        = link_to 'Play Game', player_user_get_questions_path(current_user), class: 'btn btn-lg flat-warning-button uppercase'
